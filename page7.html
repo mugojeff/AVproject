@@ -135,11 +135,11 @@ body{font-family: Roboto;}blockquote{border-color: #ffffff;}div[submit-success] 
   <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPXNry03Rvfi73RvGJmmIWaFa_JkE2yf8uDKQNrFWGQlB9aQ/formResponse" method="post" target="hidden_iframe" onsubmit="return validateForm(); ">
     <div class="w3-section">
       <label>Name</label>
-      <input class="w3-input w3-border" type="text" placeholder="Name" id="name" required name="entry.505427177">
+      <input class="w3-input w3-border" type="text" placeholder="Please enter your full name eg Mike Tyson" id="name" required name="entry.505427177">
     </div>
     <div class="w3-section">
       <label>Email</label>
-      <input class="w3-input w3-border" type="text" placeholder="Email" id="email" required name="entry.2107969238">
+      <input class="w3-input w3-border" type="text" placeholder="Email" id="email" required name="entry.317219880">
     </div>
     <div class="w3-section">
       <label>Phone</label>
@@ -149,9 +149,14 @@ body{font-family: Roboto;}blockquote{border-color: #ffffff;}div[submit-success] 
       <label>Message</label>
       <input class="w3-input w3-border" type="text" placeholder="Message" id="message" required name="entry.117245020">
     </div>
+    <div class="w3-section">
+      <label>Referral</label>
+      <input class="w3-input w3-border" type="text" placeholder="Who refered you to us?e.g Mike Tyson" id="referral" required name="entry.1155981454">
+    </div>
   
     <div class="w3-section">
-      <button class="w3-button w3-block w3-black w3-margin-bottom" type="submit">SEND</button>`
+      <button class="w3-button w3-block w3-blue
+      w3-margin-bottom" type="submit">SEND</button>`
     </div>
   
   </form>
@@ -166,11 +171,12 @@ body{font-family: Roboto;}blockquote{border-color: #ffffff;}div[submit-success] 
   
           }
           if (!name.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
-            alert("Please enter your correct name") ;//Validation Message
+            alert("Please enter the full name eg Mike Tyson") ;//Validation Message
             return false;
           }
           return true;
         }
+        
   
         function validatePhone() {
           var phone = document.getElementById('phone').value;
@@ -187,6 +193,7 @@ body{font-family: Roboto;}blockquote{border-color: #ffffff;}div[submit-success] 
          return true;
   
        }
+      
   
        function validateEmail () {
   
@@ -206,6 +213,17 @@ body{font-family: Roboto;}blockquote{border-color: #ffffff;}div[submit-success] 
         return true;
   
       }
+      function validateRefferal() {
+          var refer = document.getElementById('referral').value;
+          if (!referral.match(/^[a-zA-Z]{3,}(?: [a-zA-Z]+){0,2}$/)) {
+            alert("Please enter the full name eg Mike Tyson") ;//Validation Message
+            return false;
+          }
+         
+  
+         return true;
+  
+       }
   
   
       function validateForm() {
@@ -217,6 +235,7 @@ body{font-family: Roboto;}blockquote{border-color: #ffffff;}div[submit-success] 
         else {
           submitted=true;
           return true;
+          
         }
       }
   </script>
